@@ -12,8 +12,8 @@ testcases = load.discover('test_cases',pattern='test*.py',top_level_dir=None)
 #把发现的用例放在容器中
 suite.addTests(testcases)
 #设置测试报告的文档名---固定的名字reports+当前系统时间+HTML
-currenttime = time.strftime("%Y-%m-%d %H-%M-%S")
-filename = r'reports/reports_1'+currenttime+'.html'
+#currenttime = time.strftime("%Y-%m-%d %H-%M-%S")
+filename = r'reports/reports_1.html'
 with open(filename,'wb+') as fp:
     runner = HT.HTMLTestRunner(stream=fp,title='学生管理系统接口测试报告',description='hehehe',tester='wjx')
     runner.run(suite)
